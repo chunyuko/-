@@ -24,6 +24,7 @@ import imgmenu from "./imgmenu";
 import img1 from "./img1";
 import video1 from "./video1";
 import videomenu from "./videomenu";
+import config from "./config";
 
 export default {
   user,
@@ -52,4 +53,5 @@ export default {
   img1,
   video1,
   videomenu,
+  config,
 };

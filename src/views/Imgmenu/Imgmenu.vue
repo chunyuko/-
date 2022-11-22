@@ -398,7 +398,7 @@ export default {
     },
     limitMul(vals, form, paths, fnc) {
       let [width, height] = this.getVideoPx("mwidth", "mheight");
-      if (!width || !height) {
+      if (!width || !height || height == 0 || width == 0) {
         return this.sumbit(vals, form.type).then(() => {});
       }
       let videos = paths.map((item) => {
@@ -429,9 +429,8 @@ export default {
         });
     },
     getVideoPx(w, h) {
-      if (localStorage.getItem(this.$store.getters.userInfo.name)) {
-        let username = this.$store.getters.userInfo.name;
-        let res = JSON.parse(localStorage.getItem(username));
+      if (localStorage.getItem("config")) {
+        let res = JSON.parse(localStorage.getItem("config"));
         let [width, height] = [res[w], res[h]];
         return [width, height];
       }

@@ -201,6 +201,12 @@ export default {
           detail: "download - 下载",
         },
       ],
+      formData: {
+        mheight: null,
+        mwidth: null,
+        vheight: null,
+        vwidth: null,
+      },
     };
   },
   methods: {
@@ -212,6 +218,17 @@ export default {
     },
     login(e) {
       e.preventDefault();
+      this.$store.dispatch("list_config", {}).then((res) => {
+        let arr = res.data[0];
+        this.formData = {
+          mheight: arr.mheight,
+          mwidth: arr.mwidth,
+          vheight: arr.vheight,
+          vwidth: arr.vwidth,
+        };
+        localStorage.setItem("config", JSON.stringify(this.formData));
+        return Promise.resolve(res);
+      });
       //this.$loading.show({ tip: "验证中..." });
       this.form.validateFields((err, values) => {
         if (!err) {

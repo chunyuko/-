@@ -12,6 +12,7 @@ import * as video1 from "@/config/urls/video1";
 import * as videomenu from "@/config/urls/videomenu";
 import * as imgmenu from "@/config/urls/imgmenu";
 import * as img1 from "@/config/urls/img1";
+import * as config from "@/config/urls/config";
 
 initRequest({
   baseURL: env.baseURL,
@@ -31,6 +32,7 @@ signApi(video1);
 signApi(videomenu);
 signApi(imgmenu);
 signApi(img1);
+signApi(config);
 
 export default api;
 export { signApi };

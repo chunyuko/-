@@ -134,12 +134,12 @@ const asyncMap = [
             meta: { title: "权限管理" }, //菜单元信息
             component: () => import(/* webpackChunkName: "dashboard" */ "@/views/Rights/Rights.vue"),
           },
-          // {
-          //   path: "/sys/files",
-          //   name: "files",
-          //   meta: { title: "文件管理", authority: ["super"] }, //菜单元信息
-          //   component: () => import(/* webpackChunkName: "dashboard" */ "@/views/Sys/Files.vue"),
-          // },
+          {
+            path: "/sys/config",
+            name: "config",
+            meta: { title: "配置上传" }, //菜单元信息
+            component: () => import(/* webpackChunkName: "dashboard" */ "@/views/Config/Config.vue"),
+          },
         ],
       },
       // //情景管理

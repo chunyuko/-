@@ -23,10 +23,10 @@
           <a-icon type="logout" />
           退出
         </a-menu-item>
-        <a-menu-item key="4">
+        <!-- <a-menu-item key="4">
           <a-icon type="upload" />
           上传配置
-        </a-menu-item>
+        </a-menu-item> -->
 
         <!-- <a-menu-item key="2">2nd menu item</a-menu-item>
         <a-menu-item key="3">3rd menu item</a-menu-item> -->
